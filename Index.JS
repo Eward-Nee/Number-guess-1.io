@@ -10,12 +10,12 @@ let iguesses_left = 10
 
 const imax = 1000
 const imin = 0
-let iRandom = Math.floor(Math.random() * (imax - imin + 1)) - imin
+let iRandom = Math.floor(Math.random() * (imax - imin + 1)) + imin
 
 btnReset.onclick = function () {
     sguess = ``
     iguesses_left = 10
-    iRandom = Math.floor(Math.random() * (imax - imin + 1)) - imin
+    iRandom = Math.floor(Math.random() * (imax - imin + 1)) + imin
     lblLeft.textContent = `You have ${iguesses_left} guesses`
     lblCorrection.textContent = ``
     edtBox.value = ``
@@ -35,7 +35,7 @@ btnSubmit.onclick = function () {
                 alert(`Congrats, You won! The awnser was ${sguess}`)
                 sguess = ``
                 iguesses_left = 10
-                iRandom = Math.floor(Math.random() * (imax - imin + 1)) - imin
+                iRandom = Math.floor(Math.random() * (imax - imin + 1)) + imin
                 lblLeft.textContent = `You have ${iguesses_left} guesses`
                 lblCorrection.textContent = ``
                 edtBox.value = ``
@@ -54,7 +54,7 @@ btnSubmit.onclick = function () {
         alert(`Sorry, you lost. The awnser was ${iRandom}.`)
         sguess = ``
         iguesses_left = 10
-        iRandom = Math.floor(Math.random() * (imax - imin + 1)) - imin
+        iRandom = Math.floor(Math.random() * (imax - imin + 1)) + imin
         lblLeft.textContent = `You have ${iguesses_left} guesses`
         lblCorrection.textContent = ``
         edtBox.value = ``
